@@ -1,16 +1,17 @@
 ﻿@page "/"
 @using Blackjack.Structs;
 <div>
-<a href="https://github.com/csharpschool/CSharpCrossPlatform/tree/main/Exercises"> Länk till Jonas Github lösningar</a>
+
 <h1> <strong>Black Jack</strong> </h1>
 </div>
 
 
+@* Cards *@
 <div>
 @foreach( string card in unicodeCards)
 {
- 
-    
+
+
         <span class="cards">
             @card
         </span>
@@ -20,6 +21,10 @@
 }
 </div>
 
+@* Github link to solutions *@
+<div>
+    <a href="https://github.com/csharpschool/CSharpCrossPlatform/tree/main/Exercises"> Länk till Jonas Github lösningar</a>
+</div>
 
 @code{
 
