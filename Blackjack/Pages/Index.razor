@@ -1,0 +1,64 @@
+﻿@page "/"
+@using Blackjack.Structs;
+<div>
+<a href="https://github.com/csharpschool/CSharpCrossPlatform/tree/main/Exercises"> Länk till Jonas Github lösningar</a>
+<h1> <strong>Black Jack</strong> </h1>
+</div>
+
+
+<div>
+@foreach( string card in unicodeCards)
+{
+ 
+    
+        <span class="cards">
+            @card
+        </span>
+
+    
+
+}
+</div>
+
+
+@code{
+
+    const int numberOfCards = 52;
+    string _symbol = string.Empty;
+    bool stay=false;
+
+    int playerScore = 0;
+    int dealerScore = 0;
+
+
+    string winner = string.Empty;
+
+
+    string[] unicodeCards =
+    { "🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧","🂨","🂩","🂪","🂫","🂬","🂭","🂮" };
+
+
+
+    Card[] deck = new Card[numberOfCards];
+    Card[] playerCards = new Card[0];
+    Card[] dealerCards = new Card[0];
+
+    enum PlayerTypes
+    {
+        Player,
+        Dealer
+    }
+
+    enum Results
+    {
+        Unknown, 
+        Blackjack,
+        PlayerLost, 
+        DealerLost
+    }
+
+    Results results = Results.Unknown;
+   
+    
+    
+}
